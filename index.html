@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PS4 Game Manager</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">
+    <div class="logo">PS</div>
+    <div>
+      <h1>GAME MANAGER</h1>
+      <p class="sub">Loja de jogos para PS4</p>
+    </div>
+  </div>
+  <button id="configBtn" class="ghost">⚙ Configurar PC</button>
+</header>
+
+<main>
+  <input id="search" class="search" placeholder="🔎 Pesquisar jogo...">
+
+  <div id="pcStatus" class="pc-status hidden">
+    <span id="pcStatusText"></span>
+    <button id="changeBtn" class="ghost small">Alterar</button>
+  </div>
+
+  <div id="grid" class="grid"></div>
+  <div id="empty" class="empty hidden">
+    <p>Nenhum jogo encontrado.</p>
+  </div>
+</main>
+
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <h2>Configurar conexão com o PC</h2>
+    <p class="muted">Digite o endereço do PC que está rodando o PS4GameManager.exe</p>
+    <input id="pcUrl" class="search" placeholder="http://192.168.0.10:8080">
+    <div class="modal-actions">
+      <button id="cancelBtn" class="ghost">Cancelar</button>
+      <button id="saveBtn" class="primary">Salvar</button>
+    </div>
+  </div>
+</div>
+
+<div id="toast" class="toast"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
